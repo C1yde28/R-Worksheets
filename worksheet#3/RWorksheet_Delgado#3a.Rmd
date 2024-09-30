@@ -1,0 +1,75 @@
+---
+title: "RWorksheet_Delgado#3a.Rmd"
+author: "Clyde Marcelo Delgado"
+date: "2024-09-30"
+output: pdf_document
+
+first_11_letters <- LETTERS[1:11]
+print(first_11_letters)
+
+
+odd_letters <- LETTERS[seq(1, 26, 2)]
+print(odd_letters)
+
+
+vowels <- LETTERS[c(1, 5, 9, 15, 21)]
+print(vowels)
+
+
+last_5_letters <- letters[22:26]
+print(last_5_letters)
+
+
+subset_letters <- letters[15:24]
+print(subset_letters)
+
+
+city <- c("Tuguegarao City", "Manila", "Iloilo City", "Tacloban", "Samal Island", "Davao City")
+print(city)
+
+temp <- c(42, 39, 34, 34, 30, 27)
+print(temp)
+
+temp_data <- data.frame(City = city, Temperature = temp)
+print(temp_data)
+
+names(temp_data) <- c("City", "Temperature")
+print(temp_data)
+
+str(temp_data)
+
+print(temp_data[3:4,])
+
+max_temp_city <- temp_data[which.max(temp_data$Temperature), "City"]
+min_temp_city <- temp_data[which.min(temp_data$Temperature), "City"]
+cat("City with highest temperature:", max_temp_city, "\n")
+cat("City with lowest temperature:", min_temp_city, "\n")
+
+matrix_data <- matrix(c(1:8, 11:14), nrow=3, ncol=4)
+print(matrix_data)
+
+mult_matrix <- matrix_data * 2
+print(mult_matrix)
+
+print(matrix_data[2,])
+
+print(matrix_data[1:2, 3:4])
+
+print(matrix_data[3, 2:3])
+
+print(matrix_data[, 4])
+
+rownames(mult_matrix) <- c("isa", "dalawa", "tatlo")
+colnames(mult_matrix) <- c("uno", "dos", "tres", "quatro")
+print(mult_matrix)
+
+dim(matrix_data) <- c(6, 2)
+print(matrix_data)
+
+array_data <- array(rep(c(1, 2, 3, 6, 7, 8, 9, 0, 3, 4, 5, 1), 2), dim=c(2, 4, 3))
+print(array_data)
+
+print(dim(array_data))
+
+dimnames(array_data) <- list(letters[1:2], LETTERS[1:4], c("1st-Dimensional Array", "2nd-Dimensional Array", "3rd-Dimensional Array"))
+print(array_data)

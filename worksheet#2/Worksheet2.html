@@ -9,9 +9,11 @@
 <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
+<meta name="author" content="Clyde Marcelo Delgado" />
 
+<meta name="date" content="2024-10-01" />
 
-<title>RWorksheet_Delgado-3a.knit</title>
+<title>RWorksheet_Delgado#1.R</title>
 
 <script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
 // be compatible with the behavior of Pandoc < 2.8).
@@ -348,47 +350,170 @@ display: none;
 
 
 
+<h1 class="title toc-ignore">RWorksheet_Delgado#1.R</h1>
+<h4 class="author">Clyde Marcelo Delgado</h4>
+<h4 class="date">2024-10-01</h4>
 
 </div>
 
 
-<hr />
-<p>title: “RWorksheet_Delgado#3a.Rmd” author: “Clyde Marcelo Delgado”
-date: “2024-09-30” output: pdf_document</p>
-<p>first_11_letters &lt;- LETTERS[1:11] print(first_11_letters)</p>
-<p>odd_letters &lt;- LETTERS[seq(1, 26, 2)] print(odd_letters)</p>
-<p>vowels &lt;- LETTERS[c(1, 5, 9, 15, 21)] print(vowels)</p>
-<p>last_5_letters &lt;- letters[22:26] print(last_5_letters)</p>
-<p>subset_letters &lt;- letters[15:24] print(subset_letters)</p>
-<p>city &lt;- c(“Tuguegarao City”, “Manila”, “Iloilo City”, “Tacloban”,
-“Samal Island”, “Davao City”) print(city)</p>
-<p>temp &lt;- c(42, 39, 34, 34, 30, 27) print(temp)</p>
-<p>temp_data &lt;- data.frame(City = city, Temperature = temp)
-print(temp_data)</p>
-<p>names(temp_data) &lt;- c(“City”, “Temperature”) print(temp_data)</p>
-<p>str(temp_data)</p>
-<p>print(temp_data[3:4,])</p>
-<p>max_temp_city &lt;- temp_data[which.max(temp_data<span class="math inline">\(Temperature), &quot;City&quot;]
-min_temp_city &lt;- temp_data[which.min(temp_data\)</span>Temperature),
-“City”] cat(“City with highest temperature:”, max_temp_city, “”)
-cat(“City with lowest temperature:”, min_temp_city, “”)</p>
-<p>matrix_data &lt;- matrix(c(1:8, 11:14), nrow=3, ncol=4)
-print(matrix_data)</p>
-<p>mult_matrix &lt;- matrix_data * 2 print(mult_matrix)</p>
-<p>print(matrix_data[2,])</p>
-<p>print(matrix_data[1:2, 3:4])</p>
-<p>print(matrix_data[3, 2:3])</p>
-<p>print(matrix_data[, 4])</p>
-<p>rownames(mult_matrix) &lt;- c(“isa”, “dalawa”, “tatlo”)
-colnames(mult_matrix) &lt;- c(“uno”, “dos”, “tres”, “quatro”)
-print(mult_matrix)</p>
-<p>dim(matrix_data) &lt;- c(6, 2) print(matrix_data)</p>
-<p>array_data &lt;- array(rep(c(1, 2, 3, 6, 7, 8, 9, 0, 3, 4, 5, 1), 2),
-dim=c(2, 4, 3)) print(array_data)</p>
-<p>print(dim(array_data))</p>
-<p>dimnames(array_data) &lt;- list(letters[1:2], LETTERS[1:4],
-c(“1st-Dimensional Array”, “2nd-Dimensional Array”, “3rd-Dimensional
-Array”)) print(array_data)</p>
+<div id="a-creates-a-sequence-from--5-to-5" class="section level1">
+<h1>1.a Creates a sequence from -5 to 5</h1>
+<p>operator &lt;- -5:5 operator</p>
+</div>
+<div id="b-creates-a-sequence-from-1-to-7" class="section level1">
+<h1>1.b Creates a sequence from 1 to 7</h1>
+<p>x &lt;- 1:7 x</p>
+</div>
+<div id="creates-a-sequence-from-1-to-3-with-increments-of-0.2" class="section level1">
+<h1>2. Creates a sequence from 1 to 3 with increments of 0.2</h1>
+<p>seq(1, 3, by = 0.2)</p>
+</div>
+<div id="manipulating-the-ages-vector" class="section level1">
+<h1>3. Manipulating the ‘ages’ vector</h1>
+</div>
+<div id="a-accesses-the-3rd-element-22" class="section level1">
+<h1>3.a Accesses the 3rd element (22)</h1>
+<p>ages &lt;- c(34, 28, 22, 36, 27, 18, 52, 39, 42, 29, 35, 31, 27, 22,
+37, 34, 19, 20, 57, 49, 50, 37, 46, 25, 17, 37, 43, 53, 41, 51, 35, 24,
+33, 41, 53, 40, 18, 44, 38, 41, 48, 27, 39, 19, 30, 61, 54, 58, 26, 18)
+age_3 &lt;- ages[3] age_3</p>
+</div>
+<div id="b-accesses-the-2nd-and-4th-elements-28-and-36" class="section level1">
+<h1>3.b Accesses the 2nd and 4th elements (28 and 36)</h1>
+<p>secondfourth &lt;- ages[c(2, 4)] secondfourth</p>
+</div>
+<div id="c-removes-the-4th-and-12th-elements" class="section level1">
+<h1>3.c Removes the 4th and 12th elements</h1>
+<p>allbut4and12 &lt;- ages[-c(4, 12)] allbut4and12</p>
+</div>
+<div id="named-vector-operations" class="section level1">
+<h1>4. Named vector operations</h1>
+</div>
+<div id="a-creates-a-named-vector-and-accesses-elements-by-name" class="section level1">
+<h1>4.a Creates a named vector and accesses elements by name</h1>
+<p>x &lt;- c(“first” = 3, “second” = 0, “third” = 9) x x[c(“first”,
+“third”)]</p>
+</div>
+<div id="modifying-vectors" class="section level1">
+<h1>5 Modifying vectors</h1>
+</div>
+<div id="a-replaces-the-2nd-element-of-x-with-0" class="section level1">
+<h1>5.a Replaces the 2nd element of x with 0</h1>
+<p>x &lt;- -3:2 x[2] &lt;- 0 x</p>
+</div>
+<div id="data-frame-operations" class="section level1">
+<h1>6. Data frame operations</h1>
+</div>
+<div id="a-creates-a-data-frame-with-months-fuel-prices-and-quantities" class="section level1">
+<h1>6.a Creates a data frame with months, fuel prices, and
+quantities</h1>
+<p>month &lt;- c(“Jan”, “Feb”, “March”, “Apr”, “May”, “June”) ppl &lt;-
+c(52.50, 57.25, 60.00, 65.00, 74.25, 54.00) pq &lt;- c(25, 30, 40, 50,
+10, 45) df &lt;- data.frame(month, ppl, pq) df</p>
+</div>
+<div id="b-calculates-the-weighted-mean-average-fuel-expenditure" class="section level1">
+<h1>6.b Calculates the weighted mean (average fuel expenditure)</h1>
+<p>afe &lt;- weighted.mean(ppl, pq) afe</p>
+</div>
+<div id="summary-statistics-for-the-rivers-dataset" class="section level1">
+<h1>7. Summary statistics for the rivers dataset</h1>
+</div>
+<div id="a-calculates-various-statistics-for-the-rivers-dataset" class="section level1">
+<h1>7.a Calculates various statistics for the ‘rivers’ dataset</h1>
+<p>data &lt;- c(length(rivers), sum(rivers), mean(rivers),
+median(rivers), var(rivers),sd(rivers), min(rivers), max(rivers))
+data</p>
+</div>
+<div id="celebrity-rankings-and-manipulations" class="section level1">
+<h1>8. Celebrity rankings and manipulations</h1>
+</div>
+<div id="a-creates-vectors-for-rankings-celebrities-and-their-pay" class="section level1">
+<h1>8.a Creates vectors for rankings, celebrities, and their pay</h1>
+<p>pr &lt;- 1:25 celebrity &lt;- c(“Tom Cruise”, “Rolling Stones”,
+“Oprah Winfrey”, “U2”, “Tiger Woods”, “Steven Spielberg”, “Howard
+Stern”, “50 Cent”, “Cast of the Sopranos”, “Dan Brown”, “Bruce
+Sprinsteen”, “Donal Trump”, “Muhammad Ali”, “Paul McCartney”, “George
+Lucas”, “Elton John”, “David Letterman”, “Phil Mickelson”, “J.K.
+Rowling”, “Brad Pitt”, “Peter Jackson”, “Dr. Phil McGraw”, “Jay Leno”,
+“Celine Dion”, “Kobe Bryant”) pay &lt;- c(67, 90, 225, 110, 90, 332,
+302, 41, 52, 88, 55, 44, 55, 40, 233, 60, 40, 47, 75, 25, 39, 45, 32,
+40, 31) pr celebrity pay</p>
+</div>
+<div id="b-updates-ranking-and-pay-for-j.k.-rowling" class="section level1">
+<h1>8.b Updates ranking and pay for J.K. Rowling</h1>
+<p>Change &lt;- which(celebrity == “J.K. Rowling”) pr[Change] &lt;- 15
+pay[Change] &lt;- 90 pr pay</p>
+</div>
+<div id="c-create-a-csv-file-from-the-table-save-it-as-powerranking.csv-and-then-import-it-into-rstudio." class="section level1">
+<h1>8.c Create a CSV file from the table, save it as PowerRanking.csv,
+and then import it into RStudio.</h1>
+<p>power_ranking_data &lt;- read.csv(“PowerRanking.csv”)
+power_ranking_data</p>
+</div>
+<div id="d-access-rows-10-to-20-save-it-as-ranks.rdata-and-provide-the-r-code-for-the-process." class="section level1">
+<h1>8.d Access rows 10 to 20, save it as Ranks.RData, and provide the R
+code for the process.</h1>
+<p>subset_ranks &lt;- power_ranking_data[10:20, ] save(subset_ranks,
+file = “Ranks.RData”) load(“Ranks.RData”) subset_ranks</p>
+</div>
+<div id="download-the-hotels-vienna-httpstinyurl.comhotels-vienna" class="section level1">
+<h1>9. Download the Hotels-Vienna <a href="https://tinyurl.com/Hotels-Vienna" class="uri">https://tinyurl.com/Hotels-Vienna</a></h1>
+</div>
+<div id="a-import-the-excel-file-into-your-rstudio.-what-is-the-r-script" class="section level1">
+<h1>9.a Import the excel file into your RStudio. What is the R
+script?</h1>
+<p>library(openxlsx) hotels_vienna_data &lt;- read.xlsx(file.path(“C:”,
+“Rworksheets”, “worksheet#2”, “hotels-vienna.xlsx”))</p>
+</div>
+<div id="b-checks-the-dimensions-of-the-hotelsvienna-dataset" class="section level1">
+<h1>9.b Checks the dimensions of the hotelsvienna dataset</h1>
+<p>dimensions &lt;- dim(hotels_vienna_data)</p>
+</div>
+<div id="c-select-columns-country-neighbourhood-price-stars-accommodation_type-and-ratings" class="section level1">
+<h1>9.c Select columns country, neighbourhood, price, stars,
+accommodation_type, and ratings</h1>
+<p>selected_columns &lt;- hotels_vienna_data[, c(“country”,
+“neighbourhood”, “price”, “stars”, “accommodation_type”, “rating”)]
+selected_columns</p>
+</div>
+<div id="d-save-the-data-as-new.rdata" class="section level1">
+<h1>9.d Save the data as new.RData</h1>
+<p>save(selected_columns, file = “new.RData”)</p>
+</div>
+<div id="e-display-the-first-six-rows-and-last-six-rows-of-the-new.rdata.-what-is-the-r-script" class="section level1">
+<h1>9.e Display the first six rows and last six rows of the new.RData.
+What is the R script?</h1>
+<p>load(“new.RData”) first_six_rows &lt;- head(selected_columns)
+first_six_rows last_six_rows &lt;- tail(selected_columns)
+last_six_rows</p>
+</div>
+<div id="create-a-list-of-ten-10-vegetables-you-ate-during-your-lifetime.-if-none-just-list-down." class="section level1">
+<h1>10. Create a list of ten (10) vegetables you ate during your
+lifetime. If none, just list down.</h1>
+</div>
+<div id="a-creates-a-list-of-vegetables" class="section level1">
+<h1>10.a Creates a list of vegetables</h1>
+<p>vegetables &lt;- c(“Carrot”, “Broccoli”, “Spinach”, “Tomato”,
+“Potato”, “Cucumber”, “Zucchini”, “Bell Pepper”, “Cauliflower”, “Onion”)
+vegetables</p>
+</div>
+<div id="b-adds-more-vegetables-to-the-list" class="section level1">
+<h1>10.b Adds more vegetables to the list</h1>
+<p>vegetables &lt;- c(vegetables, “Eggplant”, “Asparagus”)
+vegetables</p>
+</div>
+<div id="c-add-4-additional-vegetables-after-index-5.-how-many-datapoints-does-your-vegetable-list-have" class="section level1">
+<h1>10.c Add 4 additional vegetables after index 5. How many datapoints
+does your vegetable list have?</h1>
+<p>vegetables &lt;- append(vegetables, c(“Lettuce”, “Radish”,
+“Beetroot”, “Pumpkin”), after = 5) total_vegetables &lt;-
+length(vegetables) vegetables total_vegetables</p>
+</div>
+<div id="d-removes-3-specific-vegetables-from-the-list" class="section level1">
+<h1>10.d Removes 3 specific vegetables from the list</h1>
+<p>vegetables &lt;- vegetables[-c(5, 10, 15)] vegetables</p>
+</div>
 
 
 

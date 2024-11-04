@@ -2,7 +2,7 @@
 title: "RWorksheet_Delgado#4c.Rmd"
 author: "Clyde Marcelo Delgado"
 date: "2024-11-04"
-output: html_document
+output: pdf_document
 ---
 ```{r}
 # 1. Using the mpg Dataset
